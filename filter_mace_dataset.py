@@ -1,3 +1,20 @@
+"""
+filter_dataset.py: A script to filter frames from an XYZ file based on energy and force thresholds, and save the filtered frames to an extended XYZ file.
+
+Author: Jinggang Lan
+Date: June 3, 2024
+
+Usage:
+    python filter_dataset.py -i input_file.xyz -o output_file.extxyz [-e energy_threshold] [-f force_threshold]
+
+Arguments:
+    -i, --input              Input XYZ file path (required)
+    -o, --output             Output XYZ file path (required)
+    -e, --energy_threshold   Energy threshold (default: 0.5)
+    -f, --force_threshold    Force threshold (default: 1)
+"""
+
+
 from ase.io import read, write
 import numpy as np
 import argparse
